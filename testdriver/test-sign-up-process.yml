@@ -1,0 +1,58 @@
+version: 4.1.29
+steps:
+  - prompt: Click on the "Sign Up" button.
+    commands:
+      - command: hover-text
+        text: Sign Up
+        description: sign up button in the center of the page
+        action: click
+  - prompt: Fill out the sign up form with appropriate test data.
+    commands:
+      - command: hover-text
+        text: Full Name*
+        description: full name input label
+        action: click
+      - command: type
+        text: Test User
+      - command: hover-text
+        text: Email Address*
+        description: email address input label
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: hover-text
+        text: Password*
+        description: password input label
+        action: click
+      - command: type
+        text: TestPassword123
+      - command: hover-text
+        text: Confirm Password*
+        description: confirm password input label
+        action: click
+      - command: type
+        text: TestPassword123
+  - prompt: Submit the form.
+    commands:
+      - command: hover-text
+        text: SIGN UP
+        description: sign up button at the bottom of the form
+        action: click
+  - prompt: Submit the form.
+    commands:
+      - command: hover-text
+        text: Password*
+        description: password input label
+        action: click
+      - command: type
+        text: TestPassword123!
+      - command: hover-text
+        text: Confirm Password*
+        description: confirm password input label
+        action: click
+      - command: type
+        text: TestPassword123!
+      - command: hover-text
+        text: SIGN UP
+        description: sign up button at the bottom of the form
+        action: click
