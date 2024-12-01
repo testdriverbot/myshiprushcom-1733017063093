@@ -1,0 +1,12 @@
+version: 4.1.29
+steps:
+  - prompt: Load the webpage.
+    commands:
+      - command: assert
+        expect: the webpage is loaded with the URL my.shiprush.com
+  - prompt: >-
+      Assert that the website logo is visible.  # Use the content of the file
+      from the environment
+    commands:
+      - command: assert
+        expect: the website logo "DESCARTES ShipRush" is visible
