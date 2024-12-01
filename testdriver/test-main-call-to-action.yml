@@ -1,0 +1,18 @@
+version: 4.1.29
+steps:
+  - prompt: Identify the main call to action on the webpage.
+    commands:
+      - command: hover-text
+        text: Sign Up
+        description: main call to action button on the webpage
+        action: hover
+  - prompt: >-
+      Assert that it is prominently displayed and functional.  # Use the content
+      of the file from the environment
+    commands:
+      - command: hover-text
+        text: Sign Up
+        description: main call to action button on the webpage
+        action: click
+      - command: assert
+        expect: the Sign Up button navigates to the sign-up page
